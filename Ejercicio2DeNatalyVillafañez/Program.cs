@@ -64,17 +64,17 @@ namespace Ejercicio2DeNatalyVillafañez
 		}
 		static string RadioCircunferencia(double a, double b, double c, double d, double e)
 		{
-			double radicando;
-			b = (b / a);
-			c = (c / a);
-			d = (d / a);
-			e = (e / a);
-			
-			radicando = Math.Pow(c,2) + Math.Pow(d,2) - (4 * e); //ACA LA CUENTA DA BIEN PERO NO SÉ POR QUÉ EN RADICANDO SE GUARDA 0.????
 
-			if (radicando > 0)
+            b = (b / a);
+            c = (c / a);
+            d = (d / a);
+            e = (e / a);
+            a = (a / a);
+
+            var radicando = Math.Pow(c,2) + Math.Pow(d,2) - 4 * e;
+			if (radicando >= 0)
 			{
-				var radio = ((1 / 2) * Math.Sqrt(radicando)).ToString();
+				var radio = ((1/2d) * Math.Sqrt(radicando)).ToString();
 				return radio;
 			}
 			else
